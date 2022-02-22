@@ -1,0 +1,26 @@
+In this article, we learned how to build custom Docker images, 
+-run a Spring Boot Application as a Docker container, 
+-and create containers with docker-compose.
+
+https://www.baeldung.com/dockerizing-spring-boot-application
+
+COMMANDS:
+1 building artifcats :  mvn clean package
+2 run artifacts      :  java -jar target/message-server-1.0.0.jar
+
+
+Docker Command
+- docker ps          : list containers
+- docker image ls -a : list images
+
+
+- image creation : docker build --tag=message-server:latest .
+- run container  : docker run -p8887:8888 message-server:latest
+
+
+DOCKER for configuring multiple containers via docker compose file:
+
+-Syntax checking      : docker-compose config
+-Build Define Image   : docker-compose up --build
+-Remove container     : docker-compose down
+
